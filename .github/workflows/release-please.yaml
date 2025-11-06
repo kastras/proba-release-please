@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: googleapis/release-please-action@v4
+        id: release
         with:
           # this assumes that you have created a personal access token
           # (PAT) and configured it as a GitHub action secret named
@@ -23,3 +24,9 @@ jobs:
           # this is a built-in strategy in release-please, see "Action Inputs"
           # for more options
           config-file: release-config-file.json
+      
+      - name: Merge release PR
+        if: steps.release.outputs.prs_created == 'true'
+        run: gh pr merge ${{ fromJSON(steps.release.outputs.pr || '{}').number }} --squash --admin
+        env:
+          GH_TOKEN: ${{ secrets.RELEASE_PLEASE_GH_TOKEN }}
