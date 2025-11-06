@@ -35,7 +35,11 @@ resource "aws_db_instance" "main" {
   multi_az                  = var.multi_az
   publicly_accessible       = var.publicly_accessible
   skip_final_snapshot       = var.skip_final_snapshot
-  final_snapshot_identifier = var.skip_final_snapshot ? null : "${var.identifier}-final-snapshot"
+  final_snapshot_identifier = var.skip_final_snapshot ? null : coalesce(var.final_snapshot_identifier, "${var.identifier}-final-snapshot")
+
+  lifecycle {
+    ignore_changes = [final_snapshot_identifier]
+  }
 
   enabled_cloudwatch_logs_exports = var.enabled_cloudwatch_logs_exports
 

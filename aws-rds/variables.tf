@@ -108,6 +108,12 @@ variable "skip_final_snapshot" {
   default     = false
 }
 
+variable "final_snapshot_identifier" {
+  description = "The name of the final DB snapshot when the instance is deleted. If not specified, defaults to '{identifier}-final-snapshot'. To ensure uniqueness across multiple deletions, consider providing a custom identifier with a timestamp suffix"
+  type        = string
+  default     = null
+}
+
 variable "enabled_cloudwatch_logs_exports" {
   description = "List of log types to enable for exporting to CloudWatch logs"
   type        = list(string)
