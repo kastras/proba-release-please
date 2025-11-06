@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/kastras/proba-release-please/compare/v0.1.0...v0.2.0) (2025-11-06)
+
+
+### Features
+
+* nre line ([553d4bf](https://github.com/kastras/proba-release-please/commit/553d4bf998db713b5916d4501a49ed1a4e0bc353))
+
 ## 0.1.0 (2025-11-06)
 
 
