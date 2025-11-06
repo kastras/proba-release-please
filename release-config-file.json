@@ -2,8 +2,7 @@
   "skip-github-release": false,
 
   "packages": {
-    "aws-*/.": {
-      // overrides release-type for node
+    "aws-cdn": {
       "release-type": "terraform-module",
       "exclude-paths": [".github"]
     }
