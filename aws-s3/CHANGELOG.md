@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/kastras/proba-release-please/compare/aws-s3-v0.1.0...aws-s3-v0.2.0) (2025-11-06)
+
+
+### Features
+
+* remove new line ([ff5c6be](https://github.com/kastras/proba-release-please/commit/ff5c6be739f5490252b864d5d85403194e29c2cb))
+
 ## 0.1.0 (2025-11-06)
 
 
