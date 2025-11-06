@@ -1,7 +1,7 @@
 {
   "skip-github-release": false,
 
-    ".": {
+    "*/*": {
       // overrides release-type for node
       "release-type": "terraform-module",
       "exclude-paths": [".github"]
