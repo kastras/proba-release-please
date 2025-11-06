@@ -96,7 +96,7 @@ variable "auto_minor_version_upgrade" {
 variable "storage_type" {
   description = "Storage type of the broker. For mq.m5 broker engine type, use ebs. For mq.t3.micro, use efs"
   type        = string
-  default     = "ebs"
+  default     = "efs"
 
   validation {
     condition     = contains(["ebs", "efs"], var.storage_type)
