@@ -29,4 +29,4 @@ jobs:
         if: steps.release.outputs.prs_created == 'true'
         run: gh pr merge ${{ fromJSON(steps.release.outputs.pr || '{}').number }} --squash --admin
         env:
-          GH_TOKEN: ${{ secrets.RELEASE_PLEASE_GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
