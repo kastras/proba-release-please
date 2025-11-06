@@ -4,6 +4,7 @@
   "packages": {
     "aws-cdn": {
       "release-type": "terraform-module",
+      "package-name" : "aws-cdn",
       "exclude-paths": [".github"]
     }
   }
