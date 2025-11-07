@@ -25,6 +25,18 @@
       "package-name" : "aws-s3",
       "exclude-paths": [".github"],
       "automerge": true
+    },
+    "old-modules/aws-old-s3": {
+      "release-type": "terraform-module",
+      "package-name" : "aws-old-s3",
+      "exclude-paths": [".github"],
+      "automerge": true
+    },
+    "old-modules/aws-old-rabbitmq": {
+      "release-type": "terraform-module",
+      "package-name" : "aws-old-rabbitmq",
+      "exclude-paths": [".github"],
+      "automerge": true
     }
   }
 
