@@ -5,22 +5,26 @@
     "aws-cdn": {
       "release-type": "terraform-module",
       "package-name" : "aws-cdn",
-      "exclude-paths": [".github"]
+      "exclude-paths": [".github"],
+      "automerge": true
     },
     "aws-rabbitmq": {
       "release-type": "terraform-module",
       "package-name" : "aws-rabbitmq",
-      "exclude-paths": [".github"]
+      "exclude-paths": [".github"],
+      "automerge": true
     },
     "aws-rds": {
       "release-type": "terraform-module",
       "package-name" : "aws-rds",
-      "exclude-paths": [".github"]
+      "exclude-paths": [".github"],
+      "automerge": true
     },
     "aws-s3": {
       "release-type": "terraform-module",
       "package-name" : "aws-s3",
-      "exclude-paths": [".github"]
+      "exclude-paths": [".github"],
+      "automerge": true
     }
   }
 
