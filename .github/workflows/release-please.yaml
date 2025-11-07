@@ -28,10 +28,10 @@ jobs:
       - name: Merge release PR
         if: steps.release.outputs.prs_created == 'true'
         run: |
-          PR_URL="${{ fromJSON(steps.release.outputs.pr || '{}').html_url }}"
-          if [ -n "$PR_URL" ]; then
-            echo "Merging PR: $PR_URL"
-            gh pr merge "$PR_URL" --squash --admin
+          PR_NUMBER="${{ fromJSON(steps.release.outputs.pr || '{}').number }}"
+          if [ -n "$PR_NUMBER" ]; then
+            echo "Merging PR: $PR_NUMBER https://github.com/${{ github.repository}}/pull/$PR_NUMBER"
+            gh pr merge "https://github.com/${{ github.repository}}/pull/$PR_NUMBER" --squash --admin
           else
             echo "No release PR to merge."
           fi
