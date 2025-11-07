@@ -1,1 +1,1 @@
-{"aws-cdn":"0.2.0","aws-rabbitmq":"0.2.0","aws-rds":"0.2.0","aws-s3":"0.3.0"}
+{"aws-cdn":"0.2.0","aws-rabbitmq":"0.2.0","aws-rds":"0.2.0","aws-s3":"0.3.0","old-modules/aws-old-s3":"0.1.0","old-modules/aws-old-rabbitmq":"0.1.0"}
