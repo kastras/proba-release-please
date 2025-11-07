@@ -27,6 +27,6 @@ jobs:
       
       - name: Merge release PR
         if: steps.release.outputs.prs_created == 'true'
-        run: gh pr merge ${{ fromJSON(steps.release.outputs.pr || '{}').number }} --squash --admin
+        run: gh pr merge ${{ fromJSON(steps.release.outputs.pr || '{}').html_url }} --squash --admin
         env:
           GH_TOKEN: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
